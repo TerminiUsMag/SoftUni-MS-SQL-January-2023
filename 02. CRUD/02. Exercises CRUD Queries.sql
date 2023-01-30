@@ -58,7 +58,17 @@ SELECT TOP(10) * FROM Projects ORDER BY StartDate ASC, Name
 SELECT TOP(7) FirstName, LastName, HireDate FROM Employees ORDER BY HireDate DESC
 
 --21. Increase Salaries - 
+--SELECT * FROM Employees - See the table
 
+--SELECT DepartmentID FROM Departments WHERE [Name] IN ('Engineering', 'Tool Design', 'Marketing', 'Information Services') - See which departments Ids we need to change
+
+UPDATE [Employees]
+SET [Salary] += [Salary]*0.12
+WHERE [DepartmentID] IN (1,2,4,11)
+SELECT [Salary]
+FROM Employees
+
+--22. All Mountain Peaks
 
 
 

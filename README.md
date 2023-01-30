@@ -1,1 +1,0 @@
-# SoftUni-MS-SQL-January-2023
