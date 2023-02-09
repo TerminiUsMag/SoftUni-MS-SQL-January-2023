@@ -62,3 +62,42 @@
 -- ORDER BY Mix
 
 --use Diablo
+
+--14.--SELECT TOP(50) [Name], FORMAT(Start,'yyyy-MM-dd') 
+                 --FROM Games
+                --WHERE YEAR(Start) = 2011 OR YEAR(Start) = 2012
+                --ORDER BY Start, [Name]
+
+--15.--  SELECT Username
+ --        ,SUBSTRING(Email,CHARINDEX('@',Email)+1,LEN(Email)-CHARINDEX('@',Email)+1)
+	--   AS [Email Provider] 
+ --    FROM Users
+ --   WHERE LEN(SUBSTRING(Email,CHARINDEX('@',Email)+1,LEN(Email)-CHARINDEX('@',Email)+1)) > 0
+ --ORDER BY [Email Provider],[Username]
+
+
+ --16.--SELECT Username
+ --      ,IpAddress
+ --  FROM Users
+ -- WHERE IpAddress LIKE '___.1%.%.___'
+ -- ORDER BY Username 
+
+--17.--  SELECT [Name] 
+--      AS [Game],
+--	     CASE
+--		     WHEN DATEPART(hour, [Start]) >= 0 AND DATEPART(hour, [Start]) < 12 THEN 'Morning'
+--			 WHEN DATEPART(HOUR, [Start]) >= 12 AND DATEPART(HOUR, [Start]) < 18 THEN 'Afternoon'
+--			 ELSE 'Evening'
+--	     END 
+--	  AS [Part of the Day],
+--          CASE
+--		     WHEN Duration <= 3 THEN 'Extra Short'
+--			 WHEN Duration > 3 AND Duration <= 6 THEN 'Short'
+--			 WHEN Duration > 6 THEN 'Long'
+--			 ELSE 'Extra Long'
+--		  END
+--      AS [Duration]
+--    FROM [Games]
+--ORDER BY [Name],[Duration],[Part of the Day]
+
+
