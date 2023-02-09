@@ -1,3 +1,4 @@
+USE [SoftUni]
 --02. Find All Information About Departments - 
 SELECT * FROM Departments
 
@@ -68,13 +69,37 @@ WHERE [DepartmentID] IN (1,2,4,11)
 SELECT [Salary]
 FROM Employees
 
---22. All Mountain Peaks
+
+USE [Geography]
+--22. All Mountain Peaks - 
+SELECT PeakName FROM Peaks ORDER BY PeakName
+
+--23. Biggest Countries by Population - 
+SELECT * FROM Countries
+
+SELECT TOP(30) [CountryName], [Population] 
+FROM Countries
+WHERE ContinentCode = 'EU'
+ORDER BY [Population] DESC, CountryCode ASC
 
 
+--24. Countries and Currency (Euro / Not Euro)
+SELECT * FROM Countries
 
+SELECT [CountryName]
+      ,[CountryCode]
+      ,CASE [CurrencyCode]
+WHEN 'EUR' THEN 'Euro'
+ELSE 'Not Euro'
+END
+AS [Currency]
+FROM [Countries]
+ORDER BY CountryName
 
+USE [Diablo]
 
-
+--25. All Diablo Characters - 
+SELECT [Name] FROM [Characters] ORDER BY [Name] 
 
 
 
