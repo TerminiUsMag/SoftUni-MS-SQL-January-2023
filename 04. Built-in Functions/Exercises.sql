@@ -44,3 +44,21 @@
 -- WHERE s.[Rank] = 2
 -- ORDER BY s.Salary DESC
 
+--use Geography
+
+--12.--SELECT CountryName,IsoCode 
+--  FROM Countries
+-- WHERE LOWER(CountryName) 
+--       LIKE
+--	   '%a%a%a%' 
+-- ORDER BY IsoCode
+
+--13.--SELECT PeakName
+--      ,RiverName
+--	  ,LOWER(CONCAT(PeakName,SUBSTRING(RiverName,2,LEN(RiverName)-1))) AS Mix
+--  FROM Peaks AS p 
+--      ,Rivers AS r
+-- WHERE LOWER(SUBSTRING(PeakName,LEN(PeakName),1)) = LOWER (SUBSTRING(RiverName,1,1))
+-- ORDER BY Mix
+
+--use Diablo
