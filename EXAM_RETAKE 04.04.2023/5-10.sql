@@ -47,13 +47,13 @@
 
 --10.
 --Select all clients, which have bought products. Select their name and average price (rounded down to the nearest integer). Show only the results for clients, whose products are distributed by vendors with "FR" in their VAT number. Order the results by average price (ascending), then by client name (descending).
-SELECT c.[Name], FLOOR(AVG(p.Price)) AS 'Average Price' FROM Clients AS c
-JOIN ProductsClients AS pc
-ON pc.ClientId = c.Id
-JOIN Products as p
-ON p.Id=pc.ProductId
-JOIN Vendors as v
-ON p.VendorId = v.Id
-WHERE v.NumberVAT LIKE '%FR%'
-GROUP BY c.[Name]
-ORDER BY AVG(p.Price) ASC, c.Name DESC
+--SELECT c.[Name], FLOOR(AVG(p.Price)) AS 'Average Price' FROM Clients AS c
+--JOIN ProductsClients AS pc
+--ON pc.ClientId = c.Id
+--JOIN Products as p
+--ON p.Id=pc.ProductId
+--JOIN Vendors as v
+--ON p.VendorId = v.Id
+--WHERE v.NumberVAT LIKE '%FR%'
+--GROUP BY c.[Name]
+--ORDER BY AVG(p.Price) ASC, c.Name DESC
